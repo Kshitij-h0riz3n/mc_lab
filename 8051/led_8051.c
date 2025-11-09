@@ -2,8 +2,8 @@
 void delay()
 {
     TMOD = Ox01;
-    TL0=0x01;
-    TH0=0x00;
+    TL0=0xFC;
+    TH0=0x66;
     TR0=1;
     while(TF0==0);
     TR0=0;
@@ -35,4 +35,5 @@ void main (void)
         // P2=0xCC;
         // delay();
     }
+
 }
